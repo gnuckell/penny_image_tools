@@ -80,6 +80,9 @@ if __name__ == "__main__":
 	config = configparser.ConfigParser()
 	config.read(args.config_path)
 
+	config.add_section('input')
+	config.add_section('output')
+
 	set_config(args, 'cancel', "false", "input")
 	set_config(args, 'source_preview', "\"\"")
 	set_config(args, 'progress_todo', 0)
